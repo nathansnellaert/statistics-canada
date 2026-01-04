@@ -1,5 +1,3 @@
-# Add parent directory (connector root) to path for utils
-
 """Statistics Canada WDS API client with rate limiting."""
 
 from ratelimit import limits, sleep_and_retry
@@ -7,8 +5,7 @@ from subsets_utils import get, post
 
 BASE_URL = "https://www150.statcan.gc.ca/t1/wds/rest"
 
-# Statistics Canada rate limits: 25 requests per second per IP
-# We'll be conservative with 20 requests per second
+
 @sleep_and_retry
 @limits(calls=20, period=1)
 def rate_limited_get(endpoint, params=None):
