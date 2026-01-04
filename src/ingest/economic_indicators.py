@@ -1,6 +1,6 @@
 
 """Fetch Statistics Canada key economic indicators"""
-from utils import get_data_from_vectors, get_series_info_from_vectors
+from utils.statcan_client import get_data_from_vectors, get_series_info_from_vectors
 from subsets_utils import save_raw_json
 
 KEY_VECTORS = [

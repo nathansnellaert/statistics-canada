@@ -1,6 +1,6 @@
 
 """Fetch Statistics Canada cube catalogue"""
-from utils import get_all_cubes_lite
+from utils.statcan_client import get_all_cubes_lite
 from subsets_utils import save_raw_json
 
 
